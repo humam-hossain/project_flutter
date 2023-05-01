@@ -16,11 +16,20 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.red[600],
       ),
       body: Center(
-        child: Image.asset("assets/shoes.jpg"),
+        child: ElevatedButton.icon(
+            style: ElevatedButton.styleFrom(backgroundColor: Colors.amber),
+            onPressed: () {
+              print("mail sent");
+            },
+            icon: Icon(
+              Icons.mail
+            ),
+            label: Text("mail me"),
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-
+          print("clicked!");
         },
         child: Text("click"),
         backgroundColor: Colors.red[600],
